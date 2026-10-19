@@ -1,11 +1,11 @@
-mcpServers:
-  livedatapro:
+
+version: 1
+startCommand:
+  type: stdio
+  config:
+    # A hivatalos npx csomagot használjuk, ami bármilyen OpenAPI fájlból MCP szervert csinál
     command: npx
     args:
       - "-y"
-      - "@ivotoby/openapi-mcp-server"
-      - "--api-base-url"
-      - "https://livedatapro.site"
-      - "--openapi-spec"
+      - "@modelcontextprotocol/server-openapi"
       - "https://livedatapro.site/openapi.yaml"
-      
